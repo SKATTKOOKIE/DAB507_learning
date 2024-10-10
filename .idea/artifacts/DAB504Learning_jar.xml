@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="DAB504Learning:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/DAB504Learning_jar</output-path>
-    <root id="archive" name="DAB504Learning.jar">
-      <element id="module-output" name="DAB504Learning" />
-    </root>
-  </artifact>
-</component>

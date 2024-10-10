@@ -1,8 +1,9 @@
 public class Vehicle
 {
-    public String make;
-    public String model;
-    public int year;
+    public String make, model, countryOfOrigin;
+    public int year, horsePower;
+    public float engineSize;
+    private String details;
 
     public Vehicle(String make, String model, int year)
     {
@@ -11,17 +12,54 @@ public class Vehicle
         this.year = year;
     }
 
-    public String getMake()
+    public Vehicle(float engineSize, int horsePower, String countryOfOrigin)
     {
-        return make;
+        this.engineSize = engineSize;
+        this.horsePower = horsePower;
+        this.countryOfOrigin = countryOfOrigin;
     }
 
-    public String getModel()
+    static void numberGen(int count)
     {
-        return model;
+        for (int i = 0; i <= count; i++) {
+            System.out.println(i);
+        }
     }
 
-    public int getYear() {
-        return year;
+    public String finerDetailsDisplay(String option)
+    {
+        switch (option)
+        {
+            case "engineSize":
+                setDetails("Engine size: " + engineSize);
+                break;
+            case "horsePower":
+                setDetails("Horse power: " + horsePower);
+                break;
+            case "countryOfOrigin":
+                setDetails("Country of origin: " + countryOfOrigin);
+                break;
+            default:
+                break;
+        }
+        return "Detail: " + getDetails();
     }
+
+    public String getDetails()
+    {
+        return details;
+    }
+
+    public void setDetails(String details)
+    {
+        this.details = details;
+    }
+
+    // CTRL W to select word
+    // CTRL WW to select string
+    // shift + alt to move lines up and down
+    // F2 cycles errors
+    // ALt + enter - suggestions to fix your code
+    // Alt + insert Build constructor for class
+
 }
